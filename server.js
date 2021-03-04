@@ -150,7 +150,7 @@ app.post("/signin", function(req,res){
   return  res.status(401).json({error:"You must be logged in"})
   }
   const token = authorization.replace("Bearer ","")
-  jwt.verify(token,JWT_SECRET,(err,payload)=>{
+  jwt.verify(token,"SECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRET",(err,payload)=>{
     if(err){
       return  res.status(401).json({error:"You must be logged in"})
     }
